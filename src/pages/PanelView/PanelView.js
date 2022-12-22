@@ -63,7 +63,7 @@ const PanelView = () => {
             {/* <ProgressBar /> */}
           </Grid>
         </Grid>
-        <StudioNavbar />
+        {/* <StudioNavbar /> */}
         <RectLine99 className="line99" />
         <RectLine99 className="line199" />
         <Rect97 className="rect97" />
