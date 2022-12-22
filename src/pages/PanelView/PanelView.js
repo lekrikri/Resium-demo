@@ -23,6 +23,7 @@ import { ReactComponent as LayerEolien } from "../../assets/icon/LayerEolien.svg
 import { ReactComponent as LayerGeothermie } from "../../assets/icon/LayerGeothermie.svg";
 import { ReactComponent as RectLine99 } from "../../assets/Background/rectangle_form/Line 99.svg";
 import { ReactComponent as Rect97 } from "../../assets/Background/rectangle_form/Rectangle 97.svg";
+import { ReactComponent as PieChart } from "../../assets/schema/Group200.svg";
 
 // TODO remove only for demo
 
@@ -56,8 +57,9 @@ const PanelView = () => {
           </Grid>
           <Grid item sm={12} md={6} lg={4}>
             <Heading className="widgetpaneltext">Widgets</Heading>
-            {/* <Subheadind>Lorem ipsum</Subheadind> */}
-            <Gauge className="gauge" />
+            {/* <Subheadind>Lorem ipsum</Subheadind>  */}
+            <PieChart className="gauge" />
+            {/* <Gauge /> */}
             {/* <Subheadind>Lorem ipsum</Subheadind> */}
             {/* <ProgressBar /> */}
             {/* <ProgressBar /> */}
