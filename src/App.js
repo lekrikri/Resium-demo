@@ -26,6 +26,7 @@ function App() {
       <ThemeProvider theme={Default}>
         <GlobalStyles />
         <Routes>
+          <Route path="/" element={<PanelView />} />
           <Route path="/" element={<Login />} />
           <Route path="/Forgot" element={<Forgot />} />
           <Route path="/Signup" element={<SignUp />} />
