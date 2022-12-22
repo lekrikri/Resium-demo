@@ -10,6 +10,7 @@ import {
   CustomizedTables,
 } from "../drive/index";
 import { Grid } from "@mui/material";
+import Box from "@mui/material/Box";
 import MapCesium from "../../components/cesium/MapCesium";
 
 // TODO remove only for demo
@@ -28,33 +29,45 @@ import { ReactComponent as Rect97 } from "../../assets/Background/rectangle_form
 const PanelView = () => {
   return (
     <Background>
-      <PanelViewNavbar />
-      <WorkspacePanelViewNavbar />
-      <Grid container spacing={4} ml={3} direction="row">
-        <Grid item sm={12} md={6} lg={4}>
-          <Heading className="layerpaneltext">Layer Panel</Heading>
-          <LayerBiomasse className="layerbiomasseicon" />
-          <LayerHydraulique className="layerhydrauliqueicon" />
-          <LayerPhotovoltaique className="layerphotovoltaiqueicon" />
-          <LayerEolien className="layereolienicon" />
-          <LayerGeothermie className="layergeothermieicon" />
+      <Box sx={{ flexGrow: 1 }}>
+        <PanelViewNavbar />
+        <WorkspacePanelViewNavbar />
+        <Grid container spacing={12}>
+          <Grid item sm={12} md={12} lg={4}>
+            <Heading className="layerpaneltext">Layer Panel</Heading>
+            <Grid
+              item
+              container
+              justifyContent="center"
+              alignItems="center"
+              xs={12}
+              md={12}
+              lg={5}
+            >
+              <LayerBiomasse className="layerbiomasseicon" />
+              <LayerHydraulique className="layerhydrauliqueicon" />
+              <LayerPhotovoltaique className="layerphotovoltaiqueicon" />
+              <LayerEolien className="layereolienicon" />
+              <LayerGeothermie className="layergeothermieicon" />
+            </Grid>
+          </Grid>
+          <Grid item sm={12} md={6} lg={4}>
+            <MapCesium />
+          </Grid>
+          <Grid item sm={12} md={6} lg={4}>
+            <Heading className="widgetpaneltext">Widgets</Heading>
+            {/* <Subheadind>Lorem ipsum</Subheadind> */}
+            <Gauge className="gauge" />
+            {/* <Subheadind>Lorem ipsum</Subheadind> */}
+            {/* <ProgressBar /> */}
+            {/* <ProgressBar /> */}
+          </Grid>
         </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <MapCesium className="guadeloupeimage" />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <Heading className="widgetpaneltext">Widgets</Heading>
-          {/* <Subheadind>Lorem ipsum</Subheadind> */}
-          <Gauge className="gauge" />
-          {/* <Subheadind>Lorem ipsum</Subheadind> */}
-          {/* <ProgressBar /> */}
-          {/* <ProgressBar /> */}
-        </Grid>
-      </Grid>
-      <StudioNavbar />
-      <RectLine99 className="line99" />
-      <RectLine99 className="line199" />
-      <Rect97 className="rect97" />
+        <StudioNavbar />
+        <RectLine99 className="line99" />
+        <RectLine99 className="line199" />
+        <Rect97 className="rect97" />
+      </Box>
     </Background>
   );
 };
