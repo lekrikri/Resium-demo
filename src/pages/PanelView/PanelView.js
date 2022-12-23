@@ -43,7 +43,7 @@ const PanelView = () => {
               alignItems="center"
               xs={12}
               md={12}
-              lg={5}
+              lg={8}
             >
               <LayerBiomasse className="layerbiomasseicon" />
               <LayerHydraulique className="layerhydrauliqueicon" />
